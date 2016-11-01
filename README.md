@@ -1,5 +1,7 @@
 # Content Security Policy Middleware for ASP.NET Core
 
+[![Build status](https://ci.appveyor.com/api/projects/status/jtnh7ifcw57tu4tv/branch/master?svg=true)](https://ci.appveyor.com/project/ErwindeVreugd/contentsecuritypolicy/branch/master)
+
 The Content Security Policy middleware for ASP.NET Core adds the Content-Security-Policy HTTP response header to reduce the risks of XSS attacks on modern browsers.
 
 How to use Content Security Policy middleware for ASP.NET Core
@@ -7,10 +9,7 @@ How to use Content Security Policy middleware for ASP.NET Core
 * Include the **ContentSecurityPolicy** package in the **project.json**.
 ```Javascript
 "dependencies": {
-        "Microsoft.AspNetCore.Server.IISIntegration": "1.0.0",
-        "Microsoft.AspNetCore.Server.Kestrel": "1.0.1",
-        "Microsoft.Extensions.Logging.Console": "1.0.0",
-        "ContentSecurityPolicy": "1.0.0.*"
+        "ContentSecurityPolicy": ""
     }
 ```
 * Modify the **Configure** method in **startup.cs**.

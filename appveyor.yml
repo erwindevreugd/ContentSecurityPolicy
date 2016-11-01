@@ -1,0 +1,23 @@
+version: '{build}'  
+pull_requests:  
+  do_not_increment_build_number: true
+branches:  
+  only:
+  - master
+  - dev
+  - release
+nuget:  
+  disable_publish_on_pr: true
+build_script:  
+- ps: .\Build.ps1
+test: off  
+artifacts:  
+- path: .\artifacts\**\*.nupkg
+  name: NuGet
+deploy:  
+- provider: NuGet
+  api_key:
+    secure: gdPU3HQzQ5+7iGIMO4LWbAAByynciaXJj7ftIJmW/gMkjFgumD2aCSQJ9K+7lHjR
+  skip_symbols: true
+  on:
+    branch: master
