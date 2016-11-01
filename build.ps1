@@ -61,4 +61,4 @@ $revision = "{0:D4}" -f [convert]::ToInt32($revision, 10)
 
 #exec { & dotnet test .\test\MediatR.Tests -c Release }
 
-exec { & dotnet pack .\src\MediatR -c Release -o .\artifacts --version-suffix=$revision } 
+exec { & dotnet pack .\src\ContentSecurityPolicy -c Release -o .\artifacts --version-suffix=$revision } 
