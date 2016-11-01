@@ -69,7 +69,7 @@ namespace ContentSecurityPolicy
             return header.AddDirective(new FrameAncestorsDirective(sources));
         }
 
-        public static ContentSecurityPolicyHeader AllowManifestSource(this ContentSecurityPolicyHeader header, params string[] sources)
+        public static ContentSecurityPolicyHeader AllowManifestSources(this ContentSecurityPolicyHeader header, params string[] sources)
         {
             return header.AddDirective(new ManifestSourceDirective(sources));
         }
