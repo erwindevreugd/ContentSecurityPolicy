@@ -103,5 +103,15 @@ namespace ContentSecurityPolicy
         {
             return header.AddDirective(new NonceDirective(nonce));
         }
+
+        public static ContentSecurityPolicyHeader AddScriptSha256(this ContentSecurityPolicyHeader header, string sha)
+        {
+            return header.AddDirective(new Sha256Directive(sha));
+        }
+
+        public static ContentSecurityPolicyHeader AddScriptSha256(this ContentSecurityPolicyHeader header, Func<string> sha)
+        {
+            return header.AddDirective(new Sha256Directive(sha));
+        }
     }
 }

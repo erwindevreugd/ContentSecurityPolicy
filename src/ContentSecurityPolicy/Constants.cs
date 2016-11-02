@@ -23,6 +23,7 @@
         internal const string UpgradeInsecureRequestsKey = "upgrade-insecure-requests";
 
         internal const string NoncePrefix = "nonce-";
+        internal const string Sha256Prefix = "sha256-";
 
         public const string WildCardSymbol = "*";
         public const string NoneKeyword = "'none'";
