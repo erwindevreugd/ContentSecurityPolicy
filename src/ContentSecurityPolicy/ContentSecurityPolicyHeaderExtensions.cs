@@ -14,6 +14,91 @@ namespace ContentSecurityPolicy
                 .AddDirective(new StyleSourceDirective(Constants.SelfKeyword));
         }
 
+        public static ContentSecurityPolicyHeader AddDirective(this ContentSecurityPolicyHeader header, BaseUriDirective directive)
+        {
+            return header.AddDirective(directive);
+        }
+
+        public static ContentSecurityPolicyHeader AddDirective(this ContentSecurityPolicyHeader header, ChildSourceDirective directive)
+        {
+            return header.AddDirective(directive);
+        }
+
+        public static ContentSecurityPolicyHeader AddDirective(this ContentSecurityPolicyHeader header, ConnectSourceDirective directive)
+        {
+            return header.AddDirective(directive);
+        }
+
+        public static ContentSecurityPolicyHeader AddDirective(this ContentSecurityPolicyHeader header, DefaultSourceDirective directive)
+        {
+            return header.AddDirective(directive);
+        }
+
+        public static ContentSecurityPolicyHeader AddDirective(this ContentSecurityPolicyHeader header, FontSourceDirective directive)
+        {
+            return header.AddDirective(directive);
+        }
+
+        public static ContentSecurityPolicyHeader AddDirective(this ContentSecurityPolicyHeader header, FormActionDirective directive)
+        {
+            return header.AddDirective(directive);
+        }
+
+        public static ContentSecurityPolicyHeader AddDirective(this ContentSecurityPolicyHeader header, FrameAncestorsDirective directive)
+        {
+            return header.AddDirective(directive);
+        }
+
+        public static ContentSecurityPolicyHeader AddDirective(this ContentSecurityPolicyHeader header, ImageSourceDirective directive)
+        {
+            return header.AddDirective(directive);
+        }
+
+        public static ContentSecurityPolicyHeader AddDirective(this ContentSecurityPolicyHeader header, ManifestSourceDirective directive)
+        {
+            return header.AddDirective(directive);
+        }
+
+        public static ContentSecurityPolicyHeader AddDirective(this ContentSecurityPolicyHeader header, MediaSourceDirective directive)
+        {
+            return header.AddDirective(directive);
+        }
+
+        public static ContentSecurityPolicyHeader AddDirective(this ContentSecurityPolicyHeader header, NonceDirective directive)
+        {
+            return header.AddDirective(directive);
+        }
+
+        public static ContentSecurityPolicyHeader AddDirective(this ContentSecurityPolicyHeader header, ObjectSourceDirective directive)
+        {
+            return header.AddDirective(directive);
+        }
+
+        public static ContentSecurityPolicyHeader AddDirective(this ContentSecurityPolicyHeader header, ScriptSourceDirective directive)
+        {
+            return header.AddDirective(directive);
+        }
+
+        public static ContentSecurityPolicyHeader AddDirective(this ContentSecurityPolicyHeader header, Sha256Directive directive)
+        {
+            return header.AddDirective(directive);
+        }
+
+        public static ContentSecurityPolicyHeader AddDirective(this ContentSecurityPolicyHeader header, StyleSourceDirective directive)
+        {
+            return header.AddDirective(directive);
+        }
+
+        public static ContentSecurityPolicyHeader AddDirective(this ContentSecurityPolicyHeader header, UpgradeInsecureRequestsDirective directive)
+        {
+            return header.AddDirective(directive);
+        }
+
+        public static ContentSecurityPolicyHeader ClearDirectives(this ContentSecurityPolicyHeader header)
+        {
+            return header.ClearDirectives();
+        }
+
         public static ContentSecurityPolicyHeader SetBaseUris(this ContentSecurityPolicyHeader header, params string[] uris)
         {
             return header.AddDirective(new BaseUriDirective(uris));
