@@ -73,7 +73,7 @@ namespace ContentSecurityPolicy
                 throw new ArgumentNullException(nameof(value));
             }
 
-            value = value.ToLowerInvariant();
+            //value = value.ToLowerInvariant();
 
             if (value == Constants.NoneKeyword)
             {

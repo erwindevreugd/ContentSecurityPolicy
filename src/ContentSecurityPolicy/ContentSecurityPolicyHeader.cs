@@ -33,9 +33,11 @@ namespace ContentSecurityPolicy
             return this;
         }
 
-        public void ClearDirectives()
+        public ContentSecurityPolicyHeader ClearDirectives()
         {
             _directives.Clear();
+
+            return this;
         }
 
         public string Compose()

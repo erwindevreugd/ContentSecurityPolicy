@@ -23,10 +23,12 @@
         internal const string UpgradeInsecureRequestsKey = "upgrade-insecure-requests";
 
         internal const string NoncePrefix = "nonce-";
+        internal const string Sha256Prefix = "sha256-";
 
         public const string WildCardSymbol = "*";
         public const string NoneKeyword = "'none'";
         public const string SelfKeyword = "'self'";
+        public const string StrictDynamicKeyword = "'strict-dynamic'";
         public const string UnsafeInlineKeyword = "'unsafe-inline'";
         public const string UnsafeEvalKeyword = "'unsafe-eval'";
 

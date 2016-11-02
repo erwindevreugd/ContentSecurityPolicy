@@ -1,18 +1,23 @@
 {
+    "name": "ContentSecurityPolicy",
+    "description": "The Content Security Policy middleware for ASP.NET Core adds the Content-Security-Policy HTTP response header to reduce the risks of XSS attacks on modern browsers.",
+    "title": "Content Security Policy",
+    "authors": ["Erwin de Vreugd"],
     "version": "0.1.0-beta-*",
     "packOptions": {
+        "summary": "The Content Security Policy middleware for ASP.NET Core adds the Content-Security-Policy HTTP response header to reduce the risks of XSS attacks on modern browsers.",
+        "tags": ["ASP.NET Core", "CSP", "Content Security Policy"],
+        "owners": ["Erwin de Vreugd"],
         "licenseUrl": "https://github.com/erwindevreugd/ContentSecurityPolicy/blob/master/LICENSE",
         "projectUrl": "https://github.com/erwindevreugd/ContentSecurityPolicy/"
     },
 
-        "dependencies": {
-            "Microsoft.AspNetCore.Http.Abstractions": "1.1.0-preview1-final",
-            "NETStandard.Library": "1.6.1-preview1-24530-04"
-        },
+    "dependencies": {
+        "Microsoft.AspNetCore.Http.Abstractions": "1.1.0-preview1-final"
+    },
 
-        "frameworks": {
-            "net451": {},
-            "netstandard1.6": {},
-            "netcoreapp1.0": {}
-        }
+    "frameworks": {
+        "net451": {},
+        "netstandard1.6": {}
     }
+}
