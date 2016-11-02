@@ -28,6 +28,7 @@
         public const string WildCardSymbol = "*";
         public const string NoneKeyword = "'none'";
         public const string SelfKeyword = "'self'";
+        public const string StrictDynamicKeyword = "'strict-dynamic'";
         public const string UnsafeInlineKeyword = "'unsafe-inline'";
         public const string UnsafeEvalKeyword = "'unsafe-eval'";
 

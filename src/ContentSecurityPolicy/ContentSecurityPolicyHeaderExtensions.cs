@@ -94,6 +94,11 @@ namespace ContentSecurityPolicy
             return header.AddDirective(new ScriptSourceDirective(Constants.UnsafeEvalKeyword));
         }
 
+        public static ContentSecurityPolicyHeader SetStrictDynamic(this ContentSecurityPolicyHeader header)
+        {
+            return header.AddDirective(new ScriptSourceDirective(Constants.StrictDynamicKeyword));
+        }
+
         public static ContentSecurityPolicyHeader AddScriptNonce(this ContentSecurityPolicyHeader header, string nonce)
         {
             return header.AddDirective(new NonceDirective(nonce));

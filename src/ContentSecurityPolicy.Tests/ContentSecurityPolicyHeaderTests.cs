@@ -186,6 +186,20 @@ namespace ContentSecurityPolicy.Tests
         }
 
         [Fact]
+        public void AddScriptNonceWithStrictDynamicAddsExpectedValues()
+        {
+            var policy = new ContentSecurityPolicyHeader();
+            var nonce = "14D0F2FF-CDBF-47CF-8A4C-1BE3D77D0679";
+            policy.AddScriptNonce(nonce);
+            policy.SetStrictDynamic();
+
+            var expected = "script-src 'nonce-14D0F2FF-CDBF-47CF-8A4C-1BE3D77D0679' 'strict-dynamic'; ";
+            var actual = policy.Compose();
+
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
         public void AddScriptSha256AddsExpectedValues()
         {
             var policy = new ContentSecurityPolicyHeader();
@@ -193,6 +207,32 @@ namespace ContentSecurityPolicy.Tests
             policy.AddScriptSha256(sha);
 
             var expected = "script-src 'sha256-9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08'; ";
+            var actual = policy.Compose();
+
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void AddScriptSha256WithStrictDynamicAddsExpectedValues()
+        {
+            var policy = new ContentSecurityPolicyHeader();
+            var sha = "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08";
+            policy.AddScriptSha256(sha);
+            policy.SetStrictDynamic();
+
+            var expected = "script-src 'sha256-9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08' 'strict-dynamic'; ";
+            var actual = policy.Compose();
+
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void SetStrictDynamicAddsExpectedValues()
+        {
+            var policy = new ContentSecurityPolicyHeader();
+            policy.SetStrictDynamic();
+
+            var expected = "script-src 'strict-dynamic'; ";
             var actual = policy.Compose();
 
             Assert.Equal(expected, actual);
