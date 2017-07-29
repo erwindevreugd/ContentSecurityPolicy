@@ -1,6 +1,6 @@
 # Content Security Policy Middleware for ASP.NET Core
 
-[![Build status](https://erwindevreugd.visualstudio.com/_apis/public/build/definitions/566f2eff-9991-4643-9a77-4e84bdb1cd31/1/badge)
+[Build status](https://erwindevreugd.visualstudio.com/_apis/public/build/definitions/566f2eff-9991-4643-9a77-4e84bdb1cd31/1/badge)
 
 The Content Security Policy middleware for ASP.NET Core adds the Content-Security-Policy HTTP response header to reduce the risks of XSS attacks on modern browsers.
 
