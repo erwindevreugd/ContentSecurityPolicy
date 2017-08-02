@@ -5,7 +5,7 @@
     <AssemblyTitle>Content Security Policy</AssemblyTitle>
     <VersionPrefix>0.1.0-beta</VersionPrefix>
     <Authors>Erwin de Vreugd</Authors>
-    <TargetFrameworks>net451;netstandard1.6</TargetFrameworks>
+    <TargetFrameworks>net451;net452;net46;net461;netstandard1.6</TargetFrameworks>
     <AssemblyName>ContentSecurityPolicy</AssemblyName>
     <PackageId>ContentSecurityPolicy</PackageId>
     <PackageTags>ASP.NET Core;CSP;Content Security Policy</PackageTags>
@@ -27,4 +27,18 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
 
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net452' ">
+    <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net46' ">
+    <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net461' ">
+    <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
 </Project>
