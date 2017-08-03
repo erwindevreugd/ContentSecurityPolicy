@@ -16,6 +16,7 @@
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
     <Version>1.0.0</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Copyright>(c) 2016 Erwin de Vreugd</Copyright>
   </PropertyGroup>
 
   <ItemGroup>
