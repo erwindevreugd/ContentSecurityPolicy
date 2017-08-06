@@ -30,14 +30,14 @@ namespace Sample
             }
 
             app.UseContentSecurityPolicy(
-                new ContentSecurityPolicyHeader()
+                new ContentSecurityPolicyHeaderBuilder()
                     .AddDefaultContentSecurityPolicyDirectives()
                     .AddScriptNonce(this.GenerateNonce)
                     .AddReportUri("http://localhost:50605/Content-Security-Policy-Reporting-Endpoint")
                     .ReportOnly()
-                //.AllowScriptSources("ajax.googleapis.com")
-                //.AllowUnsafeInlineStyles()
-                //.UpgradeInsecureRequests()
+                    .AllowScriptSources("ajax.googleapis.com")
+                    .AllowUnsafeInlineStyles()
+                    .UpgradeInsecureRequests()
                 );
 
             app.Run(async (context) =>

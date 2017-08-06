@@ -5,7 +5,7 @@ namespace ContentSecurityPolicy
 {
     public static class ContentSecurityPolicyMiddlewareExtensions
     {
-        public static IApplicationBuilder UseContentSecurityPolicy(this IApplicationBuilder applicationBuilder, ContentSecurityPolicyHeader header)
+        public static IApplicationBuilder UseContentSecurityPolicy(this IApplicationBuilder applicationBuilder, ContentSecurityPolicyHeaderBuilder header)
         {
             if (applicationBuilder == null)
             {

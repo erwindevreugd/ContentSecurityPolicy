@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 
@@ -7,22 +8,22 @@ namespace ContentSecurityPolicy
     public class ContentSecurityPolicyMiddleware
     {
         private readonly RequestDelegate _next;
-        private readonly ContentSecurityPolicyHeader _header;
+        private readonly KeyValuePair<string, string> _header;
 
-        public ContentSecurityPolicyMiddleware(RequestDelegate next, ContentSecurityPolicyHeader header)
+        public ContentSecurityPolicyMiddleware(RequestDelegate next, ContentSecurityPolicyHeaderBuilder builder)
         {
             if (next == null)
             {
                 throw new ArgumentNullException(nameof(next));
             }
 
-            if (header == null)
+            if (builder == null)
             {
-                throw new ArgumentNullException(nameof(header));
+                throw new ArgumentNullException(nameof(builder));
             }
 
             _next = next;
-            _header = header;
+            _header = builder.Compose();
         }
 
         public async Task Invoke(HttpContext context)
@@ -39,9 +40,19 @@ namespace ContentSecurityPolicy
                 throw new ArgumentNullException(nameof(response));
             }
 
-            _header.Apply(response.Headers);
+            Apply(response.Headers);
 
             await _next(context);
+        }
+
+        private void Apply(IHeaderDictionary headers)
+        {
+            if (headers == null)
+            {
+                throw new ArgumentNullException(nameof(headers));
+            }
+
+            headers[_header.Key] = _header.Value;
         }
     }
 }

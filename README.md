@@ -25,7 +25,7 @@ Modify the **Configure** method in **startup.cs**.
 public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
 {
     app.UseContentSecurityPolicy(
-        new ContentSecurityPolicyHeader()
+        new ContentSecurityPolicyHeaderBuilder()
             .AddDefaultContentSecurityPolicyDirectives()
         );
 

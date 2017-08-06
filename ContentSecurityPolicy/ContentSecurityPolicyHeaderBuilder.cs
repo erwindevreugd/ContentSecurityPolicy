@@ -5,18 +5,18 @@ using Microsoft.AspNetCore.Http;
 
 namespace ContentSecurityPolicy
 {
-    public class ContentSecurityPolicyHeader
+    public class ContentSecurityPolicyHeaderBuilder
     {
         private readonly IList<Directive> _directives;
 
-        public ContentSecurityPolicyHeader()
+        public ContentSecurityPolicyHeaderBuilder()
         {
             _directives = new List<Directive>();
         }
 
         public bool ReportOnly { get; set; } = false;
 
-        public ContentSecurityPolicyHeader AddDirective(Directive directive)
+        public ContentSecurityPolicyHeaderBuilder AddDirective(Directive directive)
         {
             if (directive == null)
             {
@@ -35,14 +35,14 @@ namespace ContentSecurityPolicy
             return this;
         }
 
-        public ContentSecurityPolicyHeader ClearDirectives()
+        public ContentSecurityPolicyHeaderBuilder ClearDirectives()
         {
             _directives.Clear();
 
             return this;
         }
 
-        public string Compose()
+        public KeyValuePair<string, string> Compose()
         {
             var sb = new StringBuilder();
 
@@ -51,22 +51,10 @@ namespace ContentSecurityPolicy
                 sb.Append(directive.Compose());
             }
 
-            return sb.ToString();
-        }
+            var headerKey = ReportOnly ? Constants.ContentSecurityPolicyReportOnlyHeader : Constants.ContentSecurityPolicyHeader;
+            var headervalue = sb.ToString();
 
-        public void Apply(IHeaderDictionary headers)
-        {
-            if (headers == null)
-            {
-                throw new ArgumentNullException(nameof(headers));
-            }
-
-            if (_directives.Count > 0)
-            {
-                var header = ReportOnly ? Constants.ContentSecurityPolicyReportOnlyHeader : Constants.ContentSecurityPolicyHeader;
-
-                headers[header] = Compose();
-            }
+            return new KeyValuePair<string, string>(headerKey, headervalue);
         }
     }
 }
