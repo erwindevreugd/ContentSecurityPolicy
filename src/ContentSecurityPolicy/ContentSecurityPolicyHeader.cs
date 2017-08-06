@@ -14,6 +14,8 @@ namespace ContentSecurityPolicy
             _directives = new List<Directive>();
         }
 
+        public bool ReportOnly { get; set; } = false;
+
         public ContentSecurityPolicyHeader AddDirective(Directive directive)
         {
             if (directive == null)
@@ -61,7 +63,9 @@ namespace ContentSecurityPolicy
 
             if (_directives.Count > 0)
             {
-                headers[Constants.ContentSecurityPolicyHeader] = Compose();
+                var header = ReportOnly ? Constants.ContentSecurityPolicyReportOnlyHeader : Constants.ContentSecurityPolicyHeader;
+
+                headers[header] = Compose();
             }
         }
     }

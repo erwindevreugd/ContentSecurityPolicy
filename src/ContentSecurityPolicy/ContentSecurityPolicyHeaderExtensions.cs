@@ -14,6 +14,13 @@ namespace ContentSecurityPolicy
                 .AddDirective(new StyleSourceDirective(Constants.SelfKeyword));
         }
 
+        public static ContentSecurityPolicyHeader ReportOnly(this ContentSecurityPolicyHeader header)
+        {
+            header.ReportOnly = true;
+
+            return header;
+        }
+
         public static ContentSecurityPolicyHeader AddDirective(this ContentSecurityPolicyHeader header, BaseUriDirective directive)
         {
             return header.AddDirective(directive);

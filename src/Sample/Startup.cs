@@ -34,6 +34,7 @@ namespace Sample
                     .AddDefaultContentSecurityPolicyDirectives()
                     .AddScriptNonce(this.GenerateNonce)
                     .AddReportUri("http://localhost:62891/CSP")
+                    .ReportOnly()
                 //.AllowScriptSources("ajax.googleapis.com")
                 //.AllowUnsafeInlineStyles()
                 //.UpgradeInsecureRequests()
