@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
 
   <PropertyGroup>
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
@@ -16,7 +16,7 @@
     <PackageTags>ASP.NET Core;CSP;Content Security Policy</PackageTags>
     <PackageProjectUrl>https://github.com/erwindevreugd/ContentSecurityPolicy/</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/erwindevreugd/ContentSecurityPolicy/blob/master/LICENSE</PackageLicenseUrl>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
     <Copyright>(c) 2016 Erwin de Vreugd</Copyright>
   </PropertyGroup>
@@ -44,4 +44,5 @@
     <Reference Include="System" />
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
+
 </Project>
