@@ -3,23 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{94B9F43D-2859-4FD4-9D52-255A4036F5FD}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BD746264-BDBB-4265-ADED-0B9882AF49E1}"
 	ProjectSection(SolutionItems) = preProject
-		.nuspec = .nuspec
-		build.debug.ps1 = build.debug.ps1
-		build.release.ps1 = build.release.ps1
-		nuget.Config = nuget.Config
+		LICENSE = LICENSE
 		README.md = README.md
-		semver.version = semver.version
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContentSecurityPolicy", "src\ContentSecurityPolicy\ContentSecurityPolicy.csproj", "{B4D10E47-9035-4BD2-A689-5DB1FDF26BA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContentSecurityPolicy", "ContentSecurityPolicy\ContentSecurityPolicy.csproj", "{B4D10E47-9035-4BD2-A689-5DB1FDF26BA5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContentSecurityPolicy.Tests", "src\ContentSecurityPolicy.Tests\ContentSecurityPolicy.Tests.csproj", "{C77A4952-80B6-4010-B7B7-3753F53A36EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContentSecurityPolicy.Tests", "ContentSecurityPolicy.Tests\ContentSecurityPolicy.Tests.csproj", "{C77A4952-80B6-4010-B7B7-3753F53A36EB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample", "src\Sample\Sample.csproj", "{0CEDB72E-72AE-40CA-9B7A-A42E61741D06}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample", "Sample\Sample.csproj", "{0CEDB72E-72AE-40CA-9B7A-A42E61741D06}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

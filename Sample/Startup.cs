@@ -33,7 +33,7 @@ namespace Sample
                 new ContentSecurityPolicyHeader()
                     .AddDefaultContentSecurityPolicyDirectives()
                     .AddScriptNonce(this.GenerateNonce)
-                    .AddReportUri("http://localhost:62891/CSP")
+                    .AddReportUri("http://localhost:50605/Content-Security-Policy-Reporting-Endpoint")
                     .ReportOnly()
                 //.AllowScriptSources("ajax.googleapis.com")
                 //.AllowUnsafeInlineStyles()

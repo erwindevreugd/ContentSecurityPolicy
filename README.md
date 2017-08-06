@@ -7,13 +7,20 @@ The Content Security Policy middleware for ASP.NET Core adds the Content-Securit
 
 How to use Content Security Policy middleware for ASP.NET Core
 --------------------------------
-* Include the **ContentSecurityPolicy** package in the **project.json**.
-```Javascript
+Add a NuGet reference to the **ContentSecurityPolicy** package.
+
+```JSON
 "dependencies": {
-        "ContentSecurityPolicy": ""
+        "ContentSecurityPolicy": "version"
     }
 ```
-* Modify the **Configure** method in **startup.cs**.
+
+```XML
+<ItemGroup>
+    <PackageReference Include="ContentSecurityPolicy" Version="version" />
+</ItemGroup>
+```
+Modify the **Configure** method in **startup.cs**.
 ```Javascript
 public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
 {
