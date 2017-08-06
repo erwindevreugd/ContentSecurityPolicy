@@ -33,9 +33,10 @@ namespace Sample
                 new ContentSecurityPolicyHeader()
                     .AddDefaultContentSecurityPolicyDirectives()
                     .AddScriptNonce(this.GenerateNonce)
-                    //.AllowScriptSources("ajax.googleapis.com")
-                    //.AllowUnsafeInlineStyles()
-                    //.UpgradeInsecureRequests()
+                    .AddReportUri("http://localhost:62891/CSP")
+                //.AllowScriptSources("ajax.googleapis.com")
+                //.AllowUnsafeInlineStyles()
+                //.UpgradeInsecureRequests()
                 );
 
             app.Run(async (context) =>

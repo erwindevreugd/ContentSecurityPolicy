@@ -3,6 +3,7 @@
     public static class Constants
     {
         public const string ContentSecurityPolicyHeader = "Content-Security-Policy";
+        public const string ContentSecurityPolicyReportOnlyHeader = "Content-Security-Policy-Report-Only";
 
         internal const string DefaultSourceDirectiveKey = "default-src";
         internal const string BaseUriDirectiveKey = "base-uri";

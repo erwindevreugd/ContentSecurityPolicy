@@ -203,5 +203,10 @@ namespace ContentSecurityPolicy
         {
             return header.AddDirective(new Sha256Directive(sha));
         }
+
+        public static ContentSecurityPolicyHeader AddReportUri(this ContentSecurityPolicyHeader header, string uri)
+        {
+            return header.AddDirective(new ReportUriDirective(uri));
+        }
     }
 }
